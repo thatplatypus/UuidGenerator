@@ -18,7 +18,7 @@ A lightweight, vanilla JavaScript Progressive Web App (PWA) for generating UUIDs
 
 ### Online
 
-Visit the GitHub Pages deployment at: [https://tombrewer.github.io/UuidGenerator/](https://tombrewer.github.io/UuidGenerator/)
+Visit the GitHub Pages deployment at: [https://thatplatypus.github.io/UuidGenerator/](https://thatplatypus.github.io/UuidGenerator/)
 
 ### Local Development
 
