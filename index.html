@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple and lightweight UUID generator">
+    <title>UUID Generator</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#3b82f6">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>UUID Generator</h1>
+        </header>
+        <main>
+            <section class="generator-section">
+                <div class="uuid-display">
+                    <output id="uuid-output" class="uuid-output">Click generate to create a UUID</output>
+                    <button id="copy-btn" class="icon-btn" title="Copy to clipboard">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="controls">
+                    <div class="options">
+                        <fieldset>
+                            <legend>UUID Format</legend>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="uuid-format" value="v4" checked>
+                                    <span>v4 (Random)</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="uuid-format" value="v7">
+                                    <span>v7 (Time + Random)</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="uuid-format" value="v1">
+                                    <span>v1 (Timestamp)</span>
+                                </label>
+                            </div>
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend>Display Format</legend>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="display-format" value="standard" checked>
+                                    <span>Standard</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="display-format" value="no-hyphens">
+                                    <span>No Hyphens</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="display-format" value="braces">
+                                    <span>With Braces</span>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    
+                    <button id="generate-btn" class="primary-btn">Generate UUID</button>
+                </div>
+            </section>
+            
+            <section class="history-section">
+                <h2>Recent UUIDs</h2>
+                <ul id="history-list" class="history-list">
+                    <!-- Generated UUIDs will appear here -->
+                </ul>
+            </section>
+        </main>
+        
+        <footer>
+            <p><a href="https://github.com/thatplatypus/UuidGenerator" target="_blank">View on GitHub</a></p>
+        </footer>
+    </div>
+    
+    <script src="./js/app.js"></script>
+</body>
+</html> 
